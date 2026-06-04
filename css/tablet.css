@@ -1,0 +1,46 @@
+@media (min-width: 500px) and (max-width: 768px) {
+  /* Navbar */
+  .nav-cell--avatar {
+    display: none !important;
+  }
+  .nav-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .nav-cell--right,
+  .nav-cell--left {
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* Personal Information */
+  .row.bg-light.p-5 {
+    padding: 1.5rem !important;
+  }
+  .row.bg-light.p-5 .col-md-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Career*/
+  section.container.mt-5 .grid .row.g-4 > .col-lg-4 {
+    width: 50% !important;
+    flex: 0 0 auto;
+  }
+  section.container.mt-5 .card {
+    height: 100% !important;
+  }
+}
+/* Certificate*/
+.col-md-6 img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+/* Project */
+.project-card .project-thumb img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-table td {
+  font-size: 0.85rem;
+}

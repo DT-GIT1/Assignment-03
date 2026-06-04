@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f2425e0340.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <title>Assignment 03</title>
+  </head>
+  <body>
+    <div class="container-fluid px-5">
+      <header class="header-section">
+        <!-- Banner Section -->
+        <section class="banner-section position-relative" id="home">
+          <div
+            class="position-absolute top-0 start-0 w-100 h-100 opacity-50"
+          ></div>
+          <h2 class="fw-bold text-white">Trần Nguyễn Duy Thạnh</h2>
+          <p class="text-white">Full Stack Developer</p>
+        </section>
+
+        <!-- Navigation Section -->
+        <nav class="navbar navbar-light bg-light custom-nav">
+          <div class="nav-grid w-100">
+            <!-- Col 1 -->
+            <div class="nav-cell nav-cell--right">
+              <a
+                href="#"
+                class="nav-link text-color-blue fw-bold d-inline-flex align-items-center gap-1"
+              >
+                <i class="fa-solid fa-user"></i>THÔNG TIN
+              </a>
+            </div>
+            <!-- Col 2 -->
+            <div class="nav-cell nav-cell--right">
+              <a
+                href="#"
+                class="nav-link text-color-blue fw-bold d-inline-flex align-items-center gap-1"
+              >
+                <i class="fa-solid fa-book"></i>LÝ LỊCH
+              </a>
+            </div>
+            <!-- Col 3: Avatar -->
+            <div class="nav-cell nav-cell--avatar">
+              <div class="avatar-wrap">
+                <img
+                  src="./images/IMG_0695.JPG"
+                  alt="Trần Nguyễn Duy Thạnh"
+                  class="avatar-img"
+                />
+              </div>
+            </div>
+            <!-- Col 4 -->
+            <div class="nav-cell nav-cell--left">
+              <a
+                href="#"
+                class="nav-link text-color-blue fw-bold d-inline-flex align-items-center gap-1"
+              >
+                <i class="fa-solid fa-envelope"></i>CHỨNG CHỈ
+              </a>
+            </div>
+            <!-- Col 5 -->
+            <div class="nav-cell nav-cell--left">
+              <a
+                href="#"
+                class="nav-link text-color-blue fw-bold d-inline-flex align-items-center gap-1"
+              >
+                <i class="fa-solid fa-star"></i>DỰ ÁN
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!--Personal Information-->
+      <section class="row bg-light p-5">
+        <div class="col-md-6 pe-md-5 mb-4 mb-md-0">
+          <h2 class="mb-4">Mục tiêu nghề nghiệp</h2>
+          <p
+            class="text-secondary"
+            style="line-height: 1.8; text-align: justify"
+          >
+            Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh nghiệp
+            của FUNIX. Em mong muốn mình sẽ được làm việc với vị trí FullStack
+            Developer, có thể vận dụng được những kiến thức đã được trau dồi và
+            không ngừng học hỏi để phát triển bản thân, cũng như hoàn thành tốt
+            nhất công việc được giao.
+          </p>
+        </div>
+        <div class="col-md-6 ps-md-5">
+          <h2 class="mb-4">Thông tin cá nhân</h2>
+          <form action="#" class="form" id="email-form">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control shadow-none"
+              placeholder="Enter email"
+              style="
+                border-color: #86b7fe;
+                outline: 0;
+                box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+              "
+            />
+            <span class="form-text text-muted mb-3"
+              >Hãy nhập email để xác thực</span
+            ><br />
+            <button
+              type="submit"
+              class="btn btn-primary px-3 py-1"
+              id="submit-btn"
+            >
+              Submit
+            </button>
+            <div
+              id="error-message"
+              class="text-danger mt-2 hide"
+              style="font-size: 14px"
+            >
+              Email không chính xác, vui lòng thử lại!
+            </div>
+          </form>
+
+          <div class="px-0 hide" id="info-section">
+            <ul class="list-unstyled text-secondary" style="line-height: 1.8">
+              <li class="mb-2"><span class="fw-bold">Giới tính :</span> Nam</li>
+              <li class="mb-2">
+                <span class="fw-bold">Ngày sinh : </span>10/01/2004
+              </li>
+              <li class="mb-2">
+                <span class="fw-bold">Điện thoại : </span>0395114654
+              </li>
+              <li class="mb-2">
+                <span class="fw-bold">Email : </span
+                ><span id="target-email">doyouwanttobe23@gmail.com</span>
+              </li>
+              <li class="mb-2">
+                <span class="fw-bold">Địa chỉ : </span>Phường Hòa Khánh, thành
+                phố Đà Nẵng
+              </li>
+              <li class="mb-2">
+                <span class="fw-bold">Website : </span>https://duythanh.vn
+              </li>
+            </ul>
+            <div class="mt-4">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-google"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Carrer Information-->
+      <section class="container mt-5">
+        <div class="grid">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 p-4 border-1 shadow-sm d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <h2 class="fs-3 fw-bold m-0">Kinh nghiệm</h2>
+                  <i
+                    class="fa-solid fa-briefcase fs-3 text-secondary opacity-75"
+                  ></i>
+                </div>
+                <div class="card-content hide">
+                  <h5 class="fw-bold">Công ty TNHH Phần mềm FPT Software</h5>
+                  <p class="text-muted mb-2 fw-bold">06/2025 - 09/2025</p>
+                  <ul class="text-secondary" style="line-height: 1.8">
+                    <li>
+                      Dùng bootstrap để tạo các trang web bán hàng cho các khách
+                      hàng
+                    </li>
+                    <li>
+                      Dùng React.js để xây dựng các thành phần tương tác trên
+                      trang web
+                    </li>
+                  </ul>
+                </div>
+
+                <button class="btn-view btn-warning btn-sm mt-2">
+                  <i class="fa-solid fa-caret-down"></i>VIEW MORE
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 p-4 border-1 shadow-sm">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <h2 class="fs-3 fw-bold">Học vấn</h2>
+                  <i
+                    class="fa-solid fa-pen-nib fs-3 text-secondary opacity-75"
+                  ></i>
+                </div>
+                <div class="card-content hide">
+                  <div class="col">
+                    <h5 class="fw-bold">Đại học Duy Tân</h5>
+                    <p class="text-muted mb-2 fw-bold">
+                      06/2022 - <span>Hiện nay</span>
+                    </p>
+                    <ul class="text-secondary" style="line-height: 1.8">
+                      <li>Chuyên ngành: Công nghệ phần mềm</li>
+                      <li>GPA: 3.45/4.0</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <button class="btn-view btn-warning btn-sm mt-2">
+                  <i class="fa-solid fa-caret-down"></i>VIEW MORE
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 p-4 border-1 shadow-sm">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <h2 class="fs-3 fw-bold">Hoạt động</h2>
+                  <i
+                    class="fa-solid fa-handshake fs-3 text-secondary opacity-75"
+                  ></i>
+                </div>
+                <div class="card-content hide">
+                  <div class="col">
+                    <div class="mb-3">
+                      <h5 class="fw-bold">Olympic Toán học Sinh viên</h5>
+                      <p class="text-muted mb-2 fw-bold">09/2023 - 04/2024</p>
+                      <ul class="text-secondary" style="line-height: 1.8">
+                        <li>Tham gia cuộc thi Olympic Toán học Sinh viên</li>
+                        <li>Môn : Đại số</li>
+                      </ul>
+                    </div>
+                    <div class="mb-3">
+                      <h5 class="fw-bold">Olympic Tin học Sinh viên</h5>
+                      <p class="text-muted mb-2 fw-bold">03/2023</p>
+                      <ul class="text-secondary" style="line-height: 1.8">
+                        <li>Tham gia cuộc thi Olympic Tin học Sinh viên</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn-view btn-warning btn-sm mt-2">
+                  <i class="fa-solid fa-caret-down"></i>VIEW MORE
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 p-4 border-1 shadow-sm">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <h2 class="fs-3 fw-bold m-0">Sở thích</h2>
+                  <i
+                    class="fa-solid fa-binoculars fs-3 text-secondary opacity-75"
+                  ></i>
+                </div>
+                <div class="card-content hide">
+                  <div class="col">
+                    <div class="row text-center g-3">
+                      <!-- Đặt g-3 ở row cha để tạo khoảng cách giữa các hàng/cột -->
+                      <!-- Ô 1: Chơi game -->
+                      <div class="col-6 col-sm-3">
+                        <!-- Di động chiếm 2 cột (col-6), Tablet/PC chiếm 4 cột (col-sm-3) -->
+                        <div
+                          class="mx-auto d-flex justify-content-center align-items-center rounded-circle border border-2 border-info text-info"
+                          style="width: 55px; height: 55px"
+                        >
+                          <i class="fa-solid fa-gamepad fs-4"></i>
+                        </div>
+                        <p class="small text-secondary m-0 mt-2 mb-2">
+                          Chơi game
+                        </p>
+                      </div>
+
+                      <!-- Ô 2: Âm nhạc -->
+                      <div class="col-6 col-sm-3">
+                        <div
+                          class="mx-auto d-flex justify-content-center align-items-center rounded-circle border border-2 border-info text-info"
+                          style="width: 55px; height: 55px"
+                        >
+                          <i class="fa-solid fa-music fs-4"></i>
+                        </div>
+                        <p class="small text-secondary m-0 mt-2 mb-2">
+                          Âm nhạc
+                        </p>
+                      </div>
+
+                      <!-- Ô 3: Nấu ăn -->
+                      <div class="col-6 col-sm-3">
+                        <div
+                          class="mx-auto d-flex justify-content-center align-items-center rounded-circle border border-2 border-info text-info"
+                          style="width: 55px; height: 55px"
+                        >
+                          <i class="fa-solid fa-utensils fs-4"></i>
+                        </div>
+                        <p class="small text-secondary m-0 mt-2 mb-2">Nấu ăn</p>
+                      </div>
+
+                      <!-- Ô 4: Du lịch -->
+                      <div class="col-6 col-sm-3">
+                        <div
+                          class="mx-auto d-flex justify-content-center align-items-center rounded-circle border border-2 border-info text-info"
+                          style="width: 55px; height: 55px"
+                        >
+                          <i class="fa-solid fa-map-marked-alt fs-4"></i>
+                        </div>
+                        <p class="small text-secondary m-0 mt-2 mb-2">
+                          Du lịch
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn-view btn-warning btn-sm mt-2">
+                  <i class="fa-solid fa-caret-down"></i>VIEW MORE
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 p-4 border-1 shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h2 class="fs-3 fw-bold">Ngôn ngữ</h2>
+                  <i
+                    class="fa-solid fa-microphone fs-3 text-secondary opacity-75"
+                  ></i>
+                </div>
+                <div class="card-content hide">
+                  <div class="col">
+                    <h2 class="fw-bold mb-2 fs-4">English - TOEIC</h2>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn-view btn-warning btn-sm mt-2">
+                  <i class="fa-solid fa-caret-down"></i>VIEW MORE
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 p-4 border-1 shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h2 class="fs-3 fw-bold">Kỹ Năng</h2>
+                  <i
+                    class="fa-solid fa-screwdriver-wrench fs-3 text-secondary opacity-75"
+                  ></i>
+                </div>
+                <div class="card-content hide">
+                  <div class="col">
+                    <h2 class="fw-bold mb-2 fs-4">HTML/CSS</h2>
+                    <div class="progress mb-4">
+                      <div
+                        class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar"
+                        style="width: 75%"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <h2 class="fw-bold mb-2 fs-4">JavaScript</h2>
+                    <div class="progress mb-4">
+                      <div
+                        class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar"
+                        style="width: 60%"
+                        aria-valuenow="60"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <h2 class="fw-bold mb-2 fs-4">ReactJS</h2>
+                    <div class="progress mb-4">
+                      <div
+                        class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn-view btn-warning btn-sm mt-2">
+                  <i class="fa-solid fa-caret-down"></i>VIEW MORE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Certificate - Award-->
+      <section class="bg-light py-5">
+        <div class="container">
+          <h2 class="fw-normal mb-5">Chứng chỉ - Giải thưởng</h2>
+
+          <div class="row align-items-center">
+            <div class="col-md-6 border-secondary border-end border-opacity-25">
+              <div class="d-flex align-items-center gap-4 pe-md-3">
+                <img
+                  src="./images/607.png"
+                  class="img-fluid border shadow-sm"
+                  alt="Chứng chỉ Sinh viên Khỏe"
+                />
+              </div>
+              <h6
+                class="fw-bold mb-2 fs-4 mt-4"
+                style="text-transform: uppercase"
+              >
+                Chứng chỉ Sinh viên Khỏe
+              </h6>
+              <ul class="list-dash text-secondary">
+                <li class="fs-5">
+                  Tham gia các hoạt động thể thao và rèn luyện sức khỏe
+                </li>
+                <li class="fs-5">Kết quả: Đạt</li>
+              </ul>
+            </div>
+
+            <div class="col-md-6">
+              <div class="d-flex align-items-center gap-4 pe-md-3">
+                <img
+                  src="./images/GEO0036-Tran Nguyen Duy Thanh.png"
+                  class="img-fluid border shadow-sm"
+                  alt="Chứng chỉ tham gia giao lưu văn hóa với trường Temasek"
+                />
+              </div>
+              <h6
+                class="fw-bold fs-5 mb-2 mt-4"
+                style="text-transform: uppercase"
+              >
+                Chứng chỉ giao lưu văn hóa với trường Temasek
+              </h6>
+              <p class="fs-5 text-secondary">
+                Tham gia các hoạt động giao lưu văn hóa với trường Temasek
+                Polytechnic
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Project-->
+      <section class="py-5">
+        <div class="container">
+          <h2 class="fw-normal mb-4">Dự án</h2>
+          <div class="row g-4 align-items-stretch">
+            <!-- Project 1: HR & Payroll Dashboard -->
+            <div class="col-md-6 d-flex">
+              <div
+                class="project-card border rounded overflow-hidden w-100 d-flex flex-column"
+              >
+                <div class="project-thumb">
+                  <img
+                    src="./images/Project_1.png"
+                    alt="HR & Payroll Dashboard"
+                    class="w-100"
+                  />
+                </div>
+                <div class="project-title px-3 py-2 border-bottom">
+                  <h5 class="fw-bold m-0 text-uppercase">
+                    HR &amp; PAYROLL DASHBOARD
+                  </h5>
+                </div>
+                <div
+                  class="project-meta px-3 py-2 border-bottom d-flex align-items-center gap-3"
+                >
+                  <span class="badge project-badge">2023</span>
+                  <span class="text-secondary small"
+                    ><i class="fa-solid fa-user me-1"></i>FUNiX</span
+                  >
+                  <span class="text-secondary small"
+                    ><i class="fa-regular fa-lightbulb me-1"></i>Developer</span
+                  >
+                </div>
+                <table class="project-table w-100 flex-grow-1">
+                  <tr>
+                    <td class="label">Mô tả</td>
+                    <td>
+                      Tích hợp các hệ thống Nhân sự (HR) và Lương bổng vào một
+                      bảng điều khiển thống nhất, đảm bảo quản lý nhân viên hiệu
+                      quả.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="label">Nhiệm vụ</td>
+                    <td>Phát triển frontend · Review Code · Xử lý lỗi</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Công nghệ</td>
+                    <td>HTML, CSS</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <!-- Project 2: GameStore Account Manager -->
+            <div class="col-md-6 d-flex">
+              <div
+                class="project-card border rounded overflow-hidden w-100 d-flex flex-column"
+              >
+                <div class="project-thumb">
+                  <img
+                    src="./images/Project_2.png"
+                    alt="GameStore Account Manager"
+                    class="w-100"
+                  />
+                </div>
+                <div class="project-title px-3 py-2 border-bottom">
+                  <h5 class="fw-bold m-0 text-uppercase">
+                    GAMESTORE ACCOUNT MANAGER
+                  </h5>
+                </div>
+                <div
+                  class="project-meta px-3 py-2 border-bottom d-flex align-items-center gap-3"
+                >
+                  <span class="badge project-badge">2024</span>
+                  <span class="text-secondary small"
+                    ><i class="fa-solid fa-user me-1"></i>FUNiX</span
+                  >
+                  <span class="text-secondary small"
+                    ><i class="fa-regular fa-lightbulb me-1"></i>Developer</span
+                  >
+                </div>
+                <table class="project-table w-100 flex-grow-1">
+                  <tr>
+                    <td class="label">Mô tả</td>
+                    <td>Quản lý tài khoản trong hệ thống GameStore.</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Nhiệm vụ</td>
+                    <td>
+                      Xây dựng hệ thống · Review Code · Phát hiện và xử lý lỗi
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="label">Công nghệ</td>
+                    <td>HTML, CSS, JavaScript</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Footer-->
+      <footer class="bg-light py-4 mt-5 d-flex gap-3">
+        <div class="container">
+          <div
+            class="d-flex justify-content-center align-items-center gap-4 gap-md-5"
+          >
+            <a
+              href="https://www.facebook.com/duy.thanh.528150/"
+              class="d-flex align-items-center gap-2 text-decoration-none text-secondary"
+            >
+              <div
+                class="rounded-circle text-white d-flex justify-content-center align-items-center shadow-sm"
+                style="width: 35px; height: 35px; background-color: #149bdc"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <span class="small">Facebook</span>
+            </a>
+
+            <a
+              href="https://github.com/DT-GIT1"
+              class="d-flex align-items-center gap-2 text-decoration-none text-secondary"
+            >
+              <div
+                class="rounded-circle text-white d-flex justify-content-center align-items-center shadow-sm"
+                style="height: 35px; width: 35px; background-color: #149bdc"
+              >
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <span class="small">Github</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

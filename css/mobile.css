@@ -1,0 +1,73 @@
+@media (max-width: 499px) {
+  /* Navbar */
+  .nav-cell--avatar {
+    display: none !important;
+  }
+  .nav-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-cell--right,
+  .nav-cell--left {
+    justify-content: flex-start;
+    padding-left: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  /* Personal Information */
+  .row.bg-light.p-5 {
+    padding: 1.25rem !important;
+  }
+  .row.bg-light.p-5 .col-md-6 {
+    width: 100% !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Career */
+  section.container.mt-5 .grid .row.g-4 > .col-lg-4 {
+    width: 100% !important;
+    flex: 0 0 auto;
+  }
+  section.container.mt-5 .card {
+    height: 100% !important;
+  }
+}
+/* Certificate */
+.bg-light .row.align-items-center .col-md-6 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.bg-light .col-md-6.border-end {
+  border-right: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
+  padding-bottom: 1.5rem;
+}
+
+.bg-light .col-md-6 img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.py-5 .row.g-4 .col-md-6 {
+  flex: 0 0 auto;
+}
+/* Project */
+.project-meta {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.4rem !important;
+}
+
+.project-thumb img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-table td {
+  font-size: 0.82rem;
+  padding: 0.5rem 0.75rem;
+}
